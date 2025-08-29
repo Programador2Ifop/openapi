@@ -1,0 +1,33 @@
+openapi: 3.1.0
+info:
+  version: 1.1.0
+  title: Datacenter API
+  termsOfService: https://example.com/terms/
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: 'https://redocly.github.io/openapi-template/logo.png'
+    altText: OpenAPI example logo
+  description: >
+    Esta es una **API de ejemplo** para demostrar las características de la especificación OpenAPI.
+tags:
+  - name: Echo
+    description: "Example echo operations."
+  - name: User
+    description: "Example actions on user accounts."
+  - name: Admin
+    description: "Example operations reserved for administrators."
+  - name: Info
+    description: "Example operations for retrieving information."
+  - name: Tag
+    description: "This is a tag description."
+x-tagGroups:
+  - name: General
+    tags:
+      - Búsqueda
+servers:
+  - url: http://10.10.10.37/~programador2/datacenter-backend/public/
+paths:
+  '/api/busqueda':
+    $ref: 'paths/busqueda.yaml'

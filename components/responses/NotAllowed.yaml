@@ -1,0 +1,6 @@
+type: object
+properties:
+  message:
+    type: string
+    description: 'Mensaje de respuesta.'
+    example: Método no permitido.

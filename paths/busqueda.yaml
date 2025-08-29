@@ -1,0 +1,100 @@
+get:
+  tags:
+    - Búsqueda
+  summary: Listar resultados de búsqueda
+  description: |
+    Esta operacion permite listar resultados mediante filtros de búsqueda.
+  operationId: obtenerBusqueda
+  parameters:
+    - name: nombre_especie
+      in: query
+      description: 'Considera el nombre de especie en la búsqueda.'
+      example: ALMEJA
+      required: false
+      schema:
+        type: string
+    - name: nombre_cientifico
+      in: query
+      description: 'Considera el nombre científico en la búsqueda.'
+      example: euromalea lenticularis
+      required: false
+      schema:
+        type: string
+    - name: anio
+      in: query
+      description: 'Considera el año del proyecto en la búsqueda.'
+      example: 2002
+      required: false
+      schema:
+        type: int
+    - name: descripcion_proyecto
+      in: query
+      description: 'Considera la descripción del proyecto en la búsqueda.'
+      example: Seguimiento recursos Bentónico
+      required: false
+      schema:
+        type: string
+    - name: tipo_informacion
+      in: query
+      description: 'Considera el tipo de información en la búsqueda.'
+      example: Muestreo de Longitud
+      required: false
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../components/schemas/Busqueda.yaml'
+          examples:
+            ejemploBasicoBusqueda:
+              summary: Ejemplo básico de búsqueda
+              description: Response del ejemplo básico de búsqueda.
+              value:
+                data:
+                - COD_PROYECTO: 'BEN'
+                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                  TIPO_INFORMACION: 'Capturas recursos Bentónicos'
+                  NUMERO_DE_FILAS: 492
+            ejemploNombreEspecie:
+              summary: Ejemplo de búsqueda por nombre de especie
+              description: Response del ejemplo con búsqueda por nombre de especie.
+              value:
+                data:
+                - COD_PROYECTO: 'BEN'
+                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                  TIPO_INFORMACION: 'Capturas recursos Bentónicos'
+                  NUMERO_DE_FILAS: 12
+                - COD_PROYECTO: 'BEN'
+                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                  TIPO_INFORMACION: 'Muestreo Biológico'
+                  NUMERO_DE_FILAS: 10
+                - COD_PROYECTO: 'BEN'
+                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                  TIPO_INFORMACION: 'Muestreo de Longitud'
+                  NUMERO_DE_FILAS: 11
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotFound.yaml'
+    '405':
+      description: Not Allowed
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotAllowed.yaml'
+    '500':
+      description: Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/ServerError.yaml'
