@@ -1,0 +1,58 @@
+type: object
+properties:
+  COD_PROYECTO:
+    description: 'El código del proyecto relacionado a la especie.'
+    type: string
+    example: BEN
+  DESC_PROYECTO:
+    description: 'La descripción del proyecto relacionada a la especie.'
+    type: string
+    example: Seguimiento recursos Bentónicos
+  NOMBRE_CIENTIFICO:
+    description: 'El nombre científico de la especie.'
+    type: string
+    example: Mazzaella laminarioides
+  NOMBRE_ESPECIE:
+    description: 'El nombre de la especie.'
+    type: string
+    example: Cuchara
+  FOTO:
+    description: 'La foto de la especie.'
+    type: string
+    example: null
+  VISTA:
+    description: 'La vista de la especie.'
+    type: string
+    example: IFOP_SCI_BEN_RDC
+  COD_ESPECIE:
+    description: 'El código de la especie.'
+    type: int
+    example: 787
+  ANIO:
+    description: 'El año del proyecto relacionado a la especie.'
+    type: int
+    example: 2023
+  TIPO_INFORMACION:
+    description: 'El tipo de información relacionado a la especie.'
+    type: string
+    example: Capturas recursos Bentónicos
+  NOMBRE_ARCHIVO:
+    description: 'El nombre del archivo relacionado a la especie.'
+    type: string
+    example: IFOP_BENTO_2023_787_RDC.csv
+  DESC_ARCHIVO:
+    description: 'La descripción del archivo relacionado a la especie.'
+    type: string
+    example: null
+  NUM_REG:
+    description: 'El número de registro del archivo.'
+    type: int
+    example: 50
+  VOLUMEN_KB:
+    description: 'El volumen del archivo.'
+    type: int
+    example: 9,67
+  KEYWORD:
+    description: 'La palabra clave del archivo.'
+    type: int
+    example: null

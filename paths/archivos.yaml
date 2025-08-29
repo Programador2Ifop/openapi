@@ -1,10 +1,10 @@
 get:
   tags:
-    - Búsqueda
-  summary: Listar resultados de búsqueda
+    - Archivos
+  summary: Listar resultados de archivos de proyectos
   description: |
-    Esta operación permite listar resultados mediante filtros de búsqueda.
-  operationId: obtenerBusqueda
+    Esta operación permite listar resultados mediante parámetros opcionales.
+  operationId: obtenerArchivos
   parameters:
     - name: nombre_especie
       in: query
@@ -52,34 +52,46 @@ get:
               data:
                 type: array
                 items:
-                  $ref: '../components/schemas/Busqueda.yaml'
+                  $ref: '../components/schemas/Archivos.yaml'
           examples:
-            ejemploBusquedaSinQueryParameters:
-              summary: Ejemplo de búsqueda sin query parameters
-              description: Response del ejemplo de búsqueda sin query parameters.
+            ejemploArchivosSinQueryParameters:
+              summary: Ejemplo de archivos sin query parameters
+              description: Response del ejemplo de archivos sin query parameters.
               value:
                 data:
                 - COD_PROYECTO: BEN
                   DESC_PROYECTO: Seguimiento recursos Bentónicos
+                  NOMBRE_CIENTIFICO: Mazzaella laminarioides
+                  NOMBRE_ESPECIE: Cuchara
+                  FOTO: null
+                  VISTA: IFOP_SCI_BEN_RDC
+                  COD_ESPECIE: 787
+                  ANIO: 2023
                   TIPO_INFORMACION: Capturas recursos Bentónicos
-                  NUMERO_DE_FILAS: 492
+                  NOMBRE_ARCHIVO: IFOP_BENTO_2023_787_RDC.csv
+                  DESC_ARCHIVO: null
+                  NUM_REG: 50
+                  VOLUMEN_KB: 9,67
+                  KEYWORD: null
             ejemploBusquedaPorNombreEspecie:
               summary: Ejemplo de búsqueda por nombre de especie
-              description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/busqueda?nombre_especie=ALMEJA.
+              description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/archivos?nombre_especie=ALMEJA.
               value:
                 data:
                 - COD_PROYECTO: BEN
                   DESC_PROYECTO: Seguimiento recursos Bentónicos
-                  TIPO_INFORMACION: 'Capturas recursos Bentónicos'
-                  NUMERO_DE_FILAS: 12
-                - COD_PROYECTO: BEN
-                  DESC_PROYECTO: Seguimiento recursos Bentónicos
-                  TIPO_INFORMACION: 'Muestreo Biológico'
-                  NUMERO_DE_FILAS: 10
-                - COD_PROYECTO: BEN
-                  DESC_PROYECTO: Seguimiento recursos Bentónicos
-                  TIPO_INFORMACION: 'Muestreo de Longitud'
-                  NUMERO_DE_FILAS: 11
+                  NOMBRE_CIENTIFICO: Euromalea lenticularis
+                  NOMBRE_ESPECIE: Almeja
+                  FOTO: null
+                  VISTA: IFOP_SCI_BEN_TALLAS
+                  COD_ESPECIE: 13
+                  ANIO: 2019
+                  TIPO_INFORMACION: Muestreo de Longitud
+                  NOMBRE_ARCHIVO: IFOP_BENTO_2019_13_ML.csv
+                  DESC_ARCHIVO: null
+                  NUM_REG: 30
+                  VOLUMEN_KB: 3,9
+                  KEYWORD: null
     '404':
       description: Not Found
       content:

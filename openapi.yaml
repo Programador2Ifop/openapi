@@ -25,12 +25,17 @@ tags:
 x-tagGroups:
   - name: General
     tags:
+      - Archivos
       - Búsqueda
       - Filtros
       - Filtros por Tipos
 servers:
   - url: http://10.10.10.37/~programador2/datacenter-backend/public/
 paths:
+  '/api/archivos':
+    $ref: 'paths/archivos.yaml'
+  # '/api/autocompletado':
+  #   $ref: 'paths/autocompletado.yaml'
   '/api/busqueda':
     $ref: 'paths/busqueda.yaml'
   '/api/filtros':

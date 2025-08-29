@@ -1,9 +1,9 @@
 get:
   tags:
     - Filtros
-  summary: Listar filtros de búsqueda por tipos de proyectos
+  summary: Listar filtros de búsqueda por código de proyecto y tipo de información
   description: |
-    Esta operación permite listar filtros de búsqueda por tipos de proyectos.
+    Esta operación permite listar filtros de búsqueda por código de proyecto y tipo de información.
   operationId: obtenerFiltrosPorTipo
   parameters:
     - name: codigo_proyecto
@@ -39,7 +39,7 @@ get:
           examples:
             ejemploCodigoProyectoTipoInformacion:
               summary: Ejemplo de filtros de búsqueda por código de proyecto y por tipo de información
-              description: Response del ejemplo de filtros de búsqueda por código de proyecto y por tipo de información.
+              description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/filtros-por-tipos?codigo_proyecto=C&tipo_informacion=Muestreo%20Biológico.
               value:
                 anios:
                 - ANIO: 1997
