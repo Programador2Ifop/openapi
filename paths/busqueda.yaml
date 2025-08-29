@@ -3,7 +3,7 @@ get:
     - Búsqueda
   summary: Listar resultados de búsqueda
   description: |
-    Esta operacion permite listar resultados mediante filtros de búsqueda.
+    Esta operación permite listar resultados mediante filtros de búsqueda.
   operationId: obtenerBusqueda
   parameters:
     - name: nombre_especie
@@ -59,7 +59,7 @@ get:
               description: Response del ejemplo básico de búsqueda.
               value:
                 data:
-                - COD_PROYECTO: 'BEN'
+                - COD_PROYECTO: BEN
                   DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
                   TIPO_INFORMACION: 'Capturas recursos Bentónicos'
                   NUMERO_DE_FILAS: 492
@@ -68,16 +68,16 @@ get:
               description: Response del ejemplo con búsqueda por nombre de especie.
               value:
                 data:
-                - COD_PROYECTO: 'BEN'
-                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                - COD_PROYECTO: BEN
+                  DESC_PROYECTO: Seguimiento recursos Bentónicos
                   TIPO_INFORMACION: 'Capturas recursos Bentónicos'
                   NUMERO_DE_FILAS: 12
-                - COD_PROYECTO: 'BEN'
-                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                - COD_PROYECTO: BEN
+                  DESC_PROYECTO: Seguimiento recursos Bentónicos
                   TIPO_INFORMACION: 'Muestreo Biológico'
                   NUMERO_DE_FILAS: 10
-                - COD_PROYECTO: 'BEN'
-                  DESC_PROYECTO: 'Seguimiento recursos Bentónicos'
+                - COD_PROYECTO: BEN
+                  DESC_PROYECTO: Seguimiento recursos Bentónicos
                   TIPO_INFORMACION: 'Muestreo de Longitud'
                   NUMERO_DE_FILAS: 11
     '404':

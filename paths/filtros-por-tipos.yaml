@@ -1,0 +1,72 @@
+get:
+  tags:
+    - Filtros
+  summary: Listar filtros de búsqueda por tipos de proyectos
+  description: |
+    Esta operación permite listar filtros de búsqueda por tipos de proyectos.
+  operationId: obtenerFiltrosPorTipo
+  parameters:
+    - name: codigo_proyecto
+      in: query
+      description: 'Considera el código del proyecto en la búsqueda.'
+      example: C
+      required: true
+      schema:
+        type: string
+    - name: tipo_informacion
+      in: query
+      description: 'Considera el tipo de información en la búsqueda.'
+      example: Muestreo Biológico
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              anios:
+                type: array
+                items:
+                  $ref: '../components/schemas/FiltrosPorTipos.yaml#/Anios'
+              especies:
+                type: array
+                items:
+                  $ref: '../components/schemas/FiltrosPorTipos.yaml#/Especies'
+          examples:
+            ejemploCodigoProyectoTipoInformacion:
+              summary: Ejemplo de filtros de búsqueda por código de proyecto y por tipo de información
+              description: Response del ejemplo de filtros de búsqueda por código de proyecto y por tipo de información.
+              value:
+                anios:
+                - ANIO: 1997
+                especies:
+                - COD_ESPECIE: 1
+                  NOMBRE_ESPECIE: 'Merluza común'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotFound.yaml'
+    '405':
+      description: Not Allowed
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotAllowed.yaml'
+    '422':
+      description: Unprocessable Content
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/UnprocessableQueryContent.yaml'
+    '500':
+      description: Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/ServerError.yaml'
