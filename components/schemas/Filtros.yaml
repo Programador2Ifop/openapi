@@ -1,0 +1,18 @@
+Proyectos:
+  type: object
+  properties:
+    COD_PROYECTO:
+      description: 'El código del proyecto que se muestra en el selector.'
+      type: string
+      example: BEN
+    DESC_PROYECTO:
+      description: 'La descripción del proyecto que se muestra en el selector.'
+      type: string
+      example: Seguimiento recursos Bentónicos
+Informacion:
+  type: object
+  properties:
+    TIPO_INFORMACION:
+      description: 'El tipo de información que se muestra en el selector.'
+      type: string
+      example: Capturas recursos Bentónicos

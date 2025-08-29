@@ -7,11 +7,11 @@ properties:
   DESC_PROYECTO:
     description: 'La descripción del proyecto realizado.'
     type: string
-    example: Seguimiento recursos Bentónicos.
+    example: Seguimiento recursos Bentónicos
   TIPO_INFORMACION:
     description: 'El tipo de información referente al proyecto.'
     type: string
-    example: Capturas recursos Bentónicos.
+    example: Capturas recursos Bentónicos
   NUMERO_DE_FILAS:
     description: 'El total de registros existentes del proyecto.'
     type: int

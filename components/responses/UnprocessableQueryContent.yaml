@@ -1,0 +1,13 @@
+type: object
+properties:
+  message:
+    type: string
+    description: 'Mensaje de respuesta.'
+    example: El campo ejemplo en query params es obligatorio.
+  errors:
+    type: object
+    properties:
+      ejemplo:
+        type: array
+        items:
+          example: El campo ejemplo en query params es obligatorio.

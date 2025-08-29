@@ -1,0 +1,18 @@
+Anios:
+  type: object
+  properties:
+    ANIO:
+      description: 'El año del proyecto que se muestra en el selector.'
+      type: int
+      example: 1997
+Especies:
+  type: object
+  properties:
+    COD_ESPECIE:
+      description: 'El código de la especie que se muestra en el selector.'
+      type: int
+      example: 1
+    NOMBRE_ESPECIE:
+      description: 'El nombre de la especie que se muestra en el selector.'
+      type: int
+      example: Merluza común

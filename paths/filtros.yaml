@@ -1,0 +1,41 @@
+get:
+  tags:
+    - Filtros
+  summary: Listar filtros de búsqueda
+  description: |
+    Esta operación permite listar filtros de búsqueda.
+  operationId: obtenerFiltros
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              proyectos:
+                type: array
+                items:
+                  $ref: '../components/schemas/Filtros.yaml#/Proyectos'
+              informacion:
+                type: array
+                items:
+                  $ref: '../components/schemas/Filtros.yaml#/Informacion'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotFound.yaml'
+    '405':
+      description: Not Allowed
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotAllowed.yaml'
+    '500':
+      description: Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/ServerError.yaml'
