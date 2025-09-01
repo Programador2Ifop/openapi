@@ -37,15 +37,24 @@ get:
                 items:
                   $ref: '../components/schemas/FiltrosPorTipos.yaml#/Especies'
           examples:
-            ejemploCodigoProyectoTipoInformacion:
-              summary: Ejemplo de filtros de búsqueda por código de proyecto y por tipo de información
+            ejemploPorCodigoProyectoCYTipoInformacionMuestreoBiologico:
+              summary: Ejemplo por código C y por tipo Muestreo Biológico
               description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/filtros-por-tipos?codigo_proyecto=C&tipo_informacion=Muestreo%20Biológico.
               value:
                 anios:
                 - ANIO: 1997
                 especies:
                 - COD_ESPECIE: 1
-                  NOMBRE_ESPECIE: 'Merluza común'
+                  NOMBRE_ESPECIE: Merluza común
+            ejemploPorCodigoProyectoBENYTipoInformacionMuestreoBiologico:
+              summary: Ejemplo por código BEN y por tipo Muestreo Biológico
+              description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/filtros-por-tipos?codigo_proyecto=BEN&tipo_informacion=Muestreo%20Biológico.
+              value:
+                anios:
+                - ANIO: 1997
+                especies:
+                - COD_ESPECIE: 13
+                  NOMBRE_ESPECIE: Almeja
     '404':
       description: Not Found
       content:
