@@ -1,0 +1,10 @@
+type: object
+properties:
+  parametro:
+    description: 'El parámetro relacionado al autocompletado.'
+    type: string
+    example: Merluza común
+  tipo:
+    description: 'El tipo de resultado relacionado al autocompletado.'
+    type: string
+    example: NOMBRE_ESPECIE

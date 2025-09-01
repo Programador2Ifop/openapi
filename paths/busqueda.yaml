@@ -70,15 +70,15 @@ get:
                 data:
                 - COD_PROYECTO: BEN
                   DESC_PROYECTO: Seguimiento recursos Bentónicos
-                  TIPO_INFORMACION: 'Capturas recursos Bentónicos'
+                  TIPO_INFORMACION: Capturas recursos Bentónicos
                   NUMERO_DE_FILAS: 12
                 - COD_PROYECTO: BEN
                   DESC_PROYECTO: Seguimiento recursos Bentónicos
-                  TIPO_INFORMACION: 'Muestreo Biológico'
+                  TIPO_INFORMACION: Muestreo Biológico
                   NUMERO_DE_FILAS: 10
                 - COD_PROYECTO: BEN
                   DESC_PROYECTO: Seguimiento recursos Bentónicos
-                  TIPO_INFORMACION: 'Muestreo de Longitud'
+                  TIPO_INFORMACION: Muestreo de Longitud
                   NUMERO_DE_FILAS: 11
     '404':
       description: Not Found

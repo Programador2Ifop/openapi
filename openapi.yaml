@@ -26,6 +26,7 @@ x-tagGroups:
   - name: General
     tags:
       - Archivos
+      - Autocompletado
       - Búsqueda
       - Filtros
       - Filtros por Tipos
@@ -34,8 +35,8 @@ servers:
 paths:
   '/api/archivos':
     $ref: 'paths/archivos.yaml'
-  # '/api/autocompletado':
-  #   $ref: 'paths/autocompletado.yaml'
+  '/api/autocompletado':
+    $ref: 'paths/autocompletado.yaml'
   '/api/busqueda':
     $ref: 'paths/busqueda.yaml'
   '/api/filtros':

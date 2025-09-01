@@ -1,0 +1,79 @@
+get:
+  tags:
+    - Autocompletado
+  summary: Listar resultados que se muestran en el autocompletado
+  description: |
+    Esta operación permite listar resultados mediante el texto ingresado en el autocompletado.
+  operationId: obtenerAutocmpletado
+  parameters:
+    - name: autocompletado
+      in: query
+      description: 'Considera los resultados por el texto ingresado.'
+      example: mer
+      required: true
+      schema:
+        type: string
+        minItems: 3
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '../components/schemas/Autocompletado.yaml'
+          examples:
+            ejemploAutocompletadoPorTextoMer:
+              summary: Ejemplo de autocompletado por el texto mer
+              description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/autocompletado?autocompletado=mer.
+              value:
+                data:
+                - parametro: Merluza
+                  tipo: NOMBRE_ESPECIE
+                - parametro: Merluccius gayi gayi
+                  tipo: NOMBRE_CIENTIFICO
+                - parametro: Strangomera bentincki
+                  tipo: NOMBRE_CIENTIFICO
+                - parametro: Seguimiento crustáceos demersales
+                  tipo: DESCRIPCION_PROYECTO
+            ejemploAutocompletadoPorTextoLan:
+              summary: Ejemplo de autocompletado por el texto lan
+              description: Response de http://10.10.10.37/~programador2/datacenter-backend/public/api/autocompletado?autocompletado=lan.
+              value:
+                data:
+                - parametro: Langostino colorado
+                  tipo: NOMBRE_ESPECIE
+                - parametro: Langostino amarillo
+                  tipo: NOMBRE_ESPECIE
+                - parametro: Almeja;almeja blanca;almejon
+                  tipo: NOMBRE_ESPECIE
+                - parametro: Megabalanus psittacus
+                  tipo: NOMBRE_CIENTIFICO
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotFound.yaml'
+    '405':
+      description: Not Allowed
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/NotAllowed.yaml'
+    '422':
+      description: Unprocessable Content
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/UnprocessableQueryContent.yaml'
+    '500':
+      description: Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '../components/responses/ServerError.yaml'
