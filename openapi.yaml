@@ -7,7 +7,7 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: 'https://www.ifop.cl/wp-content/themes/ifop-2024-07/assets/img/logo_ifop_transparente.png'
     altText: OpenAPI example logo
   description: >
     Esta es una **API de ejemplo** para demostrar las características de la especificación OpenAPI.

@@ -1,18 +1,37 @@
-type: object
-properties:
-  COD_PROYECTO:
-    description: 'El código del proyecto en específico.'
-    type: string
-    example: BEN
-  DESC_PROYECTO:
-    description: 'La descripción del proyecto realizado.'
-    type: string
-    example: Seguimiento recursos Bentónicos
-  TIPO_INFORMACION:
-    description: 'El tipo de información referente al proyecto.'
-    type: string
-    example: Capturas recursos Bentónicos
-  NUMERO_DE_FILAS:
-    description: 'El total de registros existentes del proyecto.'
-    type: int
-    example: 492
+Data:
+  type: object
+  properties:
+    COD_PROYECTO:
+      description: 'El código del proyecto en específico.'
+      type: string
+      example: BEN
+    DESC_PROYECTO:
+      description: 'La descripción del proyecto realizado.'
+      type: string
+      example: Seguimiento recursos Bentónicos
+    TIPO_INFORMACION:
+      description: 'El tipo de información referente al proyecto.'
+      type: string
+      example: Capturas recursos Bentónicos
+    NUMERO_DE_FILAS:
+      description: 'El total de registros existentes del proyecto.'
+      type: int
+      example: 492
+Anios:
+  type: object
+  properties:
+    ANIO:
+      description: 'El año relacionado a los resultados.'
+      type: int
+      example: 1997
+Especies:
+  type: object
+  properties:
+    NOMBRE_ESPECIE:
+      description: 'El nombre común de la especie relacionada a los resultados.'
+      type: string
+      example: Almeja
+    NOMBRE_CIENTIFICO:
+      description: 'El nombre científico de la especie relacionada a los resultados.'
+      type: string
+      example: Euromalea lenticularis
