@@ -5,6 +5,7 @@ get:
   description: |
     Esta operación permite listar filtros de búsqueda.
   operationId: obtenerFiltros
+  deprecated: true
   responses:
     '200':
       description: Success

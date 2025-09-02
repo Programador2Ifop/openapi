@@ -5,6 +5,7 @@ get:
   description: |
     Esta operación permite listar filtros de búsqueda por código de proyecto y tipo de información.
   operationId: obtenerFiltrosPorTipo
+  deprecated: true
   parameters:
     - name: codigo_proyecto
       in: query
